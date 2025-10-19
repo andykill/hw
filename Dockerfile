@@ -1,8 +1,5 @@
-FROM nginx:alpine
+FROM postgres:latest
 
-WORKDIR /usr/share/nginx/html
+WORKDIR /data/pg
 
-COPY ./default.conf /etc/nginx/conf.d/default.conf
-COPY ./index.html ./
-
-EXPOSE 80
+VOLUME ["/data/pg"]
