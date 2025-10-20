@@ -1,0 +1,1 @@
+ansible -i hosts.ini -m setup -a "filter=ansible_distribution,ansible_hostname,ansible_os_family,ansible_distribution_version,ansible_default_ipv4.address,ansible_env" demo
